@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//public $age;
+	private $pasword;
+	
+	public function __construct( $age )
+	{	
+		$this->age = $age;
+		$this->pasword = 'asdfasdfasdf';
+	} 
+	
+	private function getAge()
+	{
+		echo "Age " . $this->age;
+	}
+	
+	public function getPassword($hint)
+	{
+		if($hint == 'getit')
+		{
+			return $this->pasword;
+		}
+		else
+		{
+			return 'You don\'t have permission';
+		}
+	}
+}
+
+
